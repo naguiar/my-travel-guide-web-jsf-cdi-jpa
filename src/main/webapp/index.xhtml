@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>My Travel Guide</title>
+	<h:outputStylesheet library="css" name="style.css" />
+</h:head>
+
+<h:body>
+
+	<h:form id="formLogin">
+	
+		<h:panelGroup styleClass="panelGroupLogin">
+
+			<h:panelGrid styleClass="panelGridLogin" columns="2" columnClasses="labelColumn, inputColumn">
+				<f:facet name="header">
+					<h:outputText value="My Travel Guide" />
+				</f:facet>
+
+				<h:outputLabel value="Username:" for="username" />
+				<p:inputText id="username" />
+
+				<h:outputLabel value="Password:" for="password" />
+				<p:password id="password" />
+
+				<f:facet name="footer">
+					<p:commandButton value="Sign in" />
+					<h:commandLink value="Register" />
+				</f:facet>
+			</h:panelGrid>
+			
+			<h:panelGroup styleClass="login-language">
+				<p>
+					<h:commandLink value="English" /> | 
+					<h:commandLink value="Portuguese" /> | 
+					<h:commandLink value="Spanish" />
+				</p>
+			</h:panelGroup>
+			
+		</h:panelGroup>
+	</h:form>
+
+</h:body>
+</html>
