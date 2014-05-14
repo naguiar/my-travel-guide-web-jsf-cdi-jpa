@@ -7,18 +7,19 @@
 
 <h:head>
 	<title>My Travel Guide</title>
+	<link rel="shortcut icon" type="image/x-icon" href="#{request.contextPath}/resources/images/favicon.ico"/>
 	<h:outputStylesheet library="css" name="style.css" />
 </h:head>
 
 <h:body>
 
-	<h:form id="formLogin">
+	<h:form id="form-login">
 	
-		<h:panelGroup styleClass="panelGroupLogin">
+		<h:panelGroup styleClass="panel-group-login">
 
-			<h:panelGrid styleClass="panelGridLogin" columns="2" columnClasses="labelColumn, inputColumn">
+			<h:panelGrid styleClass="panel-grid-login" columns="2" columnClasses="label-column, input-column">
 				<f:facet name="header">
-					<h:outputText value="My Travel Guide" />
+					<h:graphicImage library="images" name="logo.png"/>
 				</f:facet>
 
 				<h:outputLabel value="Username:" for="username" />
@@ -28,7 +29,8 @@
 				<p:password id="password" />
 
 				<f:facet name="footer">
-					<p:commandButton value="Sign in" />
+					<p:spacer width="60" height="0"/>
+					<p:commandButton value="Sign in" icon="ui-icon-circle-arrow-e" />
 					<h:commandLink value="Register" />
 				</f:facet>
 			</h:panelGrid>
@@ -43,6 +45,8 @@
 			
 		</h:panelGroup>
 	</h:form>
+	
+	<div id="img-kombi-login"></div>
 
 </h:body>
 </html>

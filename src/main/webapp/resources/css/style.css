@@ -7,52 +7,68 @@ body {
 	background-image: url("../resources/images/bg_img.png");
 }
 
-.panelGroupLogin{
-	width: 320px;
+.panel-group-login{
+	width: 300px;
 	height: 280px;
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	margin-left: -160px;
+	margin-left: -150px;
 	margin-top: -140px;
 }
 
-.panelGridLogin {
+.panel-grid-login {
 	border: 1px solid #C0C0C0;
 	background: #FFFFFF;
 	border-radius: 4px;
 	width: 100%;
-	height:80%;
 }
 
-.panelGridLogin thead, .panelGridLogin tfoot {
+.panel-grid-login thead, .panel-grid-login tfoot {
 	background: #F2F2F2;
 	text-align: center;
+	line-height: 50px;
 }
 
-.panelGridLogin thead {
-	line-height: 30px;
-	font-size: 15px;
-	text-shadow: 0 2px white;
-	font-weight: bold;
+.panel-grid-login thead tr th img {
+	padding-top: 15px;
 }
 
-.labelColumn{
+.panel-grid-login tbody{
+	line-height: 50px;
+}
+
+.label-column{
 	text-align: right;
+	padding-left: 40px;
 }
 
 .login-language {
-	margin: 20px 0;
 	font-size: 11px;
 	text-align: center;
 	text-shadow: 0 1px white;
 }
 
-.login-language a, .panelGridLogin tfoot a{
+.login-language p{
+	margin-left: 70px;
+}
+
+.login-language a, .panel-grid-login tfoot a{
 	color: #4B4B4B;
 	text-decoration: none;
 }
 
-.login-language a:hover, .panelGridLogin tfoot a:hover{
+.login-language a:hover, .panel-grid-login tfoot a:hover{
 	text-decoration: underline;
+}
+
+#img-kombi-login {
+	width: 176px;
+	height: 112px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -250px;
+	margin-top: 10px;
+	background-image: url("../resources/images/kombi.png")
 }
