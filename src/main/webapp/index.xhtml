@@ -1,52 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html"
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:ui="http://java.sun.com/jsf/facelets" 
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:h="http://java.sun.com/jsf/html" 
 	xmlns:p="http://primefaces.org/ui">
 
-<h:head>
-	<title>My Travel Guide</title>
-	<link rel="shortcut icon" type="image/x-icon" href="#{request.contextPath}/resources/images/favicon.ico"/>
-	<h:outputStylesheet library="css" name="style.css" />
-</h:head>
-
-<h:body>
-
-	<h:form id="form-login">
+<ui:composition template="/WEB-INF/templates/_template.xhtml">
 	
+	<ui:define name="body">
+		
+		<p:messages />
 		<h:panelGroup styleClass="panel-group-login">
-
-			<h:panelGrid styleClass="panel-grid-login" columns="2" columnClasses="label-column, input-column">
-				<f:facet name="header">
-					<h:graphicImage library="images" name="logo.png"/>
-				</f:facet>
-
-				<h:outputLabel value="Username:" for="username" />
-				<p:inputText id="username" />
-
-				<h:outputLabel value="Password:" for="password" />
-				<p:password id="password" />
-
-				<f:facet name="footer">
-					<p:spacer width="60" height="0"/>
-					<p:commandButton value="Sign in" icon="ui-icon-circle-arrow-e" />
-					<h:commandLink value="Register" />
-				</f:facet>
-			</h:panelGrid>
-			
-			<h:panelGroup styleClass="login-language">
-				<p>
-					<h:commandLink value="English" /> | 
-					<h:commandLink value="Portuguese" /> | 
-					<h:commandLink value="Spanish" />
-				</p>
-			</h:panelGroup>
-			
-		</h:panelGroup>
-	</h:form>
 	
-	<div id="img-kombi-login"></div>
-
-</h:body>
+			<h:form id="form-login">
+				<h:panelGrid id="grid" styleClass="panel-grid" columns="2" columnClasses="label-column, input-column">
+					<f:facet name="header">
+						<h:graphicImage library="images" name="logo.png" />
+					</f:facet>
+	
+					<h:outputLabel value="Username:" for="username" />
+					<p:inputText id="username" value="#{loginBean.user.username}" required="true" requiredMessage="Username required" />
+	
+					<h:outputLabel value="Password:" for="password" />
+					<p:password id="password" value="#{loginBean.user.password}" required="true" requiredMessage="Password required" />
+	
+					<f:facet name="footer">
+						<p:spacer width="60" height="0" />
+						<p:commandButton value="Sign in" icon="ui-icon-circle-arrow-e" action="#{loginBean.login}" ajax="false" />
+						<h:link value="Register" outcome="user" />
+					</f:facet>
+				</h:panelGrid>
+			</h:form>
+		
+			<ui:include src="/WEB-INF/templates/_language.xhtml" />
+	
+		</h:panelGroup>
+	
+		<div class="img-kombi img-kombi-login"></div>		
+	
+	</ui:define>
+	
+</ui:composition>
 </html>
