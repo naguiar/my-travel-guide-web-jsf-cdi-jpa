@@ -7,8 +7,23 @@ body {
 	background-image: url("../resources/images/bg_img.png");
 }
 
-.panel-group-login{
-	width: 300px;
+.ui-button {
+    margin-right: 10px !important;
+}
+
+#panel-group-template {
+	border: 1px solid red;
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -250px;
+	margin-top: -250px;
+}
+
+.panel-group-login {
+ 	width: 300px;
 	height: 280px;
 	position: absolute;
 	left: 50%;
@@ -17,58 +32,68 @@ body {
 	margin-top: -140px;
 }
 
-.panel-grid-login {
+.img-kombi {
+	width: 176px;
+	height: 112px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background: url("../resources/images/kombi.png") no-repeat;
+	margin-left: -230px;
+	margin-top: 0px;
+}
+
+.img-kombi-login {
+	margin-left: -230px;
+	margin-top: 0px;
+}
+
+.panel-grid {
 	border: 1px solid #C0C0C0;
 	background: #FFFFFF;
 	border-radius: 4px;
 	width: 100%;
 }
 
-.panel-grid-login thead, .panel-grid-login tfoot {
+.panel-grid thead, .panel-grid tfoot {
 	background: #F2F2F2;
 	text-align: center;
 	line-height: 50px;
 }
 
-.panel-grid-login thead tr th img {
+.panel-grid thead tr th img {
 	padding-top: 15px;
 }
 
-.panel-grid-login tbody{
-	line-height: 50px;
-}
-
-.label-column{
+.label-column {
 	text-align: right;
-	padding-left: 40px;
 }
 
-.login-language {
+.input-column input {
+	width: 90%;
+}
+
+.label-column, .input-column, .message-column {
+	width: 200px;
+}
+
+.language {
 	font-size: 11px;
 	text-align: center;
 	text-shadow: 0 1px white;
 }
 
-.login-language p{
-	margin-left: 70px;
+.language p {
+	margin-top:10px;
+	margin-left: 180px;
+	margin-left: 90px;
 }
 
-.login-language a, .panel-grid-login tfoot a{
+.language a, .panel-grid tfoot a {
 	color: #4B4B4B;
 	text-decoration: none;
 }
 
-.login-language a:hover, .panel-grid-login tfoot a:hover{
+.language a:hover, .panel-grid tfoot a:hover {
 	text-decoration: underline;
-}
-
-#img-kombi-login {
-	width: 176px;
-	height: 112px;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin-left: -250px;
-	margin-top: 10px;
-	background-image: url("../resources/images/kombi.png")
 }
